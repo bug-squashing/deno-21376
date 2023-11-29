@@ -8,8 +8,8 @@ const res = await Q.all(
 
     return await Cl.user.upsert({
       create: value,
-      update: { name },
-      where: { id },
+      update: value, // correct this by replacing with { name }
+      where: value, // correct this by replacing with { id }
     });
   })
 );
